@@ -16,20 +16,17 @@ if (
   document.getElementById('interactionType').innerHTML = 'Touch ';
 }
 
-const touchdown = () => {
-  mainVideo.play()
-  mapVideo.play()
-  if (initialClick) {
-    document.getElementById('disclaimer').style.display = 'none'
-    initialClick = false
-    return
-  }
-  mainVideo.style.opacity = 0
-  // console.log('touch down')
+const initSoundboard = () => {
+   document.getElementById('soundboardDisclaimerMsg').remove();
+  document.getElementById("soundboard").style.opacity = 1;
+}
+
+const removeSoundboard = () => {
+  document.getElementById("soundboard").style.opacity = 0;
 }
 
 const removeDisclaimer = () => {
-  document.getElementById('mapMode').remove()
+  document.getElementById('soundboardDisclaimerMsg').remove()
 }
 
 const touchup = () => {
@@ -38,8 +35,8 @@ const touchup = () => {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  window.addEventListener('mousedown', touchdown, false)
+  window.addEventListener('mousedown', initSoundboard, false)
   window.addEventListener('mouseup', touchup, false)
-  window.addEventListener('touchstart', touchdown, false)
+  window.addEventListener('touchstart', initSoundboard, false)
   window.addEventListener('touchend', touchup, false)
 })

@@ -27,9 +27,9 @@
   </head>
   <body class="bg-black">
     <!-- ANOTHER DISCLAIMER -->
-    <!-- <div
+    <div
       onclick="removeDisclaimer()"
-      id="mapMode"
+      id="soundboardDisclaimerMsg"
       class="z-10 fixed p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
       role="alert"
     >
@@ -39,7 +39,7 @@
         <img src="img/map.png" width="25px" />
       </span>
       <span class="font-semibold mr-2 text-left flex-auto"
-        >Hit the video for map mode
+        >Hit the video for soundboard
       </span>
       <svg
         style="margin-top: 3px"
@@ -52,46 +52,58 @@
           d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
         />
       </svg>
-    </div> -->
+    </div>
     <!-- disclaimer -->
 
     <!-- SOUNDBOARD -->
-    <section class="fixed z-10 w-full  h-full flex-col flex">
-      <div class="flex h-full">
-        <div class="flex-initial w-full px-10">
-          <div class="text-white border border-white flex-initial h-full">1</div>
+    <section class="opacity-0" id="soundboard">
+      <div class="fixed z-05 w-full h-full" style="z-index:5; opacity: 0.5; display: block; background: black;"></div>
+      <div class="fixed z-10 w-full h-full flex-col flex">
+        <div class="flex h-full">
+          <div class="flex-initial w-full px-10 py-5">
+            <div class="font-bold text-white border border-white flex-initial h-full">14.3 billion years later</div>
+          </div>
+          <div class="flex-initial w-full px-10 py-5">
+            <div class="font-bold text-white border border-white flex-initial h-full">boost the probe cannon's power</div>
+          </div>
+            <div class="flex-initial w-full px-10 py-5">
+            <div class="font-bold text-white border border-white flex-initial h-full">I don't know what to do with those dam eggs</div>
+          </div>
         </div>
-        <div class="flex-initial w-full px-10">
-          <div class="text-white border border-white flex-initial h-full">2</div>
+        <div class="flex h-full">
+          <div class="flex-initial w-full px-10 py-5">
+            <div class="font-bold text-white border border-white flex-initial h-full justify-center">I knew I should have written down those coordinates</div>
+          </div>
+          <div class="flex-initial w-full px-10 py-5">
+            <div class="font-bold text-white border border-white flex-initial h-full">I'm annoyed with myself</div>
+          </div>
+            <div class="flex-initial w-full px-10 py-5">
+            <div class="font-bold text-white border border-white flex-initial h-full">I'm quite proud of myself</div>
+          </div>
         </div>
-          <div class="flex-initial w-full px-10">
-          <div class="text-white border border-white flex-initial h-full">3</div>
-        </div>
-      </div>
-      <div class="flex h-full">
-        <div class="flex-initial w-full px-10">
-          <div class="text-white border border-white flex-initial h-full justify-center">1</div>
-        </div>
-        <div class="flex-initial w-full px-10">
-          <div class="text-white border border-white flex-initial h-full">2</div>
-        </div>
-          <div class="flex-initial w-full px-10">
-          <div class="text-white border border-white flex-initial h-full">3</div>
-        </div>
-      </div>
-      <div class="flex h-full">
-        <div class="flex-initial w-full px-10">
-          <div class="text-white border border-white flex-initial h-full">1</div>
-        </div>
-        <div class="flex-initial w-full px-10">
-          <div class="text-white border border-white flex-initial h-full">2</div>
-        </div>
-          <div class="flex-initial w-full px-10">
-          <div class="text-white border border-white flex-initial h-full">3</div>
+        <div class="flex h-full">
+          <div class="flex-initial w-full px-10 py-5">
+            <div class="font-bold text-white border border-white flex-initial h-full">I'm dead</div>
+          </div>
+          <div class="flex-initial w-full px-10 py-5">
+            <div class="font-bold text-white border border-white flex-initial h-full">sort of upload of memories</div>
+          </div>
+            <div class="flex-initial w-full px-10 py-5">
+            <div onclick="removeSoundboard()" class="text-black background-white border border-white flex-initial h-full" style="display: block; background: white">go back</div>
+          </div>
         </div>
       </div>
     </section>
       
+    <div class="opacity-5">
+      <audio src="audio/14.3 billion years later.m4a"></audio>
+      <audio src="audio/boost the probe cannon's power.m4a"></audio>
+      <audio src="audio/I don't know what to do with those dam eggs.m4a"></audio>
+      <audio src="audio/I knew I should have written down those coordinates.m4a"></audio>
+      <audio src="audio/I'm annoyed with myself.m4a"></audio>
+      <audio src="audio/I'm quite proud of myself.m4a"></audio>
+      <audio src="audio/I'm dead.m4a"></audio>
+    </div>
 
     <!-- soundboard -->
 
@@ -113,7 +125,7 @@
     >
       <div class="w-100 m-10 mt-0">
         <h2 class="text-4xl">
-          <span id="interactionType">Click </span>to see the soundboard
+          <span id="interactionType">Click </span>to start
         </h2>
         <h2 class="text-xl">Headphones recommended</h2>
         <h2 class="fixed bottom-10 text-xl">
