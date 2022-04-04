@@ -30,18 +30,19 @@
     <div
       onclick="removeDisclaimer()"
       id="soundboardDisclaimerMsg"
-      class="z-10 fixed p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+      class="rounded opacity-0 fixed p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
       role="alert"
+      style="z-index: 12"
     >
       <span
         class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3"
       >
-        <img src="img/map.png" width="25px" />
+        <img src="img/volume.png" width="25px" />
       </span>
       <span class="font-semibold mr-2 text-left flex-auto"
         >Hit the video for soundboard
       </span>
-      <svg
+      <!-- <svg
         style="margin-top: 3px"
         class="fill-current opacity-75 h-4 w-4"
         xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +52,7 @@
         <path
           d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
         />
-      </svg>
+      </svg> -->
     </div>
     <!-- disclaimer -->
 
@@ -61,48 +62,49 @@
       <div class="fixed z-10 w-full h-full flex-col flex">
         <div class="flex h-full">
           <div class="flex-initial w-full px-10 py-5">
-            <div class="font-bold text-white border border-white flex-initial h-full">14.3 billion years later</div>
+            <div onclick="intAudio('audio_1')" class="font-bold text-white border border-white flex-initial h-full items-center justify-center flex px-5">14.3 billion years later</div>
           </div>
           <div class="flex-initial w-full px-10 py-5">
-            <div class="font-bold text-white border border-white flex-initial h-full">boost the probe cannon's power</div>
+            <div onclick="intAudio('audio_2')" class="font-bold text-white border border-white flex-initial h-full  items-center justify-center flex px-5">boost the probe cannon's power</div>
           </div>
             <div class="flex-initial w-full px-10 py-5">
-            <div class="font-bold text-white border border-white flex-initial h-full">I don't know what to do with those dam eggs</div>
+            <div onclick="intAudio('audio_3')" class="font-bold text-white border border-white flex-initial h-full  items-center justify-center flex px-5">I don't know what to do with those dam eggs</div>
           </div>
         </div>
         <div class="flex h-full">
           <div class="flex-initial w-full px-10 py-5">
-            <div class="font-bold text-white border border-white flex-initial h-full justify-center">I knew I should have written down those coordinates</div>
+            <div onclick="intAudio('audio_4')" class="font-bold text-white border border-white flex-initial h-full  items-center justify-center flex px-5">I knew I should have written down those coordinates</div>
           </div>
           <div class="flex-initial w-full px-10 py-5">
-            <div class="font-bold text-white border border-white flex-initial h-full">I'm annoyed with myself</div>
+            <div onclick="intAudio('audio_5')" class="font-bold text-white border border-white flex-initial h-full  items-center justify-center flex px-5">I'm annoyed with myself</div>
           </div>
             <div class="flex-initial w-full px-10 py-5">
-            <div class="font-bold text-white border border-white flex-initial h-full">I'm quite proud of myself</div>
+            <div onclick="intAudio('audio_6')" class="font-bold text-white border border-white flex-initial h-full  items-center justify-center flex px-5">I'm quite proud of myself</div>
           </div>
         </div>
         <div class="flex h-full">
           <div class="flex-initial w-full px-10 py-5">
-            <div class="font-bold text-white border border-white flex-initial h-full">I'm dead</div>
+            <div onclick="intAudio('audio_7')" class="font-bold text-white border border-white flex-initial h-full  items-center justify-center flex px-5">I'm dead</div>
           </div>
           <div class="flex-initial w-full px-10 py-5">
-            <div class="font-bold text-white border border-white flex-initial h-full">sort of upload of memories</div>
+            <div onclick="intAudio('audio_8')" class="font-bold text-white border border-white flex-initial h-full  items-center justify-center flex px-5">sort of upload of memories</div>
           </div>
             <div class="flex-initial w-full px-10 py-5">
-            <div onclick="removeSoundboard()" class="text-black background-white border border-white flex-initial h-full" style="display: block; background: white">go back</div>
+            <div onclick="removeSoundboard()" class="text-black background-white border border-white flex-initial h-full  items-center justify-center items-center justify-center flex px-5" style="background: white">remove soundboard</div>
           </div>
         </div>
       </div>
     </section>
       
     <div class="opacity-5">
-      <audio src="audio/14.3 billion years later.m4a"></audio>
-      <audio src="audio/boost the probe cannon's power.m4a"></audio>
-      <audio src="audio/I don't know what to do with those dam eggs.m4a"></audio>
-      <audio src="audio/I knew I should have written down those coordinates.m4a"></audio>
-      <audio src="audio/I'm annoyed with myself.m4a"></audio>
-      <audio src="audio/I'm quite proud of myself.m4a"></audio>
-      <audio src="audio/I'm dead.m4a"></audio>
+      <audio id="audio_1" src="audio/14.3 billion years later.m4a"></audio>
+      <audio id="audio_2" src="audio/boost the probe cannon's power.m4a"></audio>
+      <audio id="audio_3" src="audio/I don't know what to do with those dam eggs.m4a"></audio>
+      <audio id="audio_4" src="audio/I knew I should have written down those coordinates.m4a"></audio>
+      <audio id="audio_5" src="audio/I'm annoyed with myself.m4a"></audio>
+      <audio id="audio_6" src="audio/I'm quite proud of myself.m4a"></audio>
+      <audio id="audio_7" src="audio/I'm dead.m4a"></audio>
+      <audio id="audio_8" src="audio/sort of upload of memories.m4a"></audio>
     </div>
 
     <!-- soundboard -->
@@ -115,7 +117,7 @@
       id="mainVideo"
     >
       <source
-        src="https://video.wixstatic.com/video/f8c1b4_b5bbef6bfefd41c5bf57f9aaee123569/720p/mp4/file.mp4"
+        src="https://video.wixstatic.com/video/f8c1b4_cb5eda7d506b4424ae512646a3abde19/720p/mp4/file.mp4"
       />
     </video>
     <!-- BLACK BOX DISCLAIMER -->
