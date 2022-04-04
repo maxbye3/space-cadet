@@ -1,5 +1,6 @@
 const mainVideo = document.getElementById('mainVideo')
-let initialClick = true
+let initialClick = true;
+mainVideo.volume = 0.2;
 
 // setInterval(() => {
 //   mapVideo.currentTime = mainVideo.currentTime
