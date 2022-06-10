@@ -19,13 +19,13 @@ if (
 const touchdown = () => {
   if(document.getElementById('clickContainer')){
     document.getElementById('clickContainer').remove();
+    document.getElementById('soundboardDisclaimerMsg').style.opacity = 1;
     // play video
     mainVideo.play();
   }
   if(document.getElementById('disclaimer')){
     document.getElementById('disclaimer').remove();
   }
-  document.getElementById('soundboardDisclaimerMsg').style.opacity = 1;
   console.log("play video");
   initialClick = false;
 }
