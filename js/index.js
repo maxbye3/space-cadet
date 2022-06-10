@@ -17,17 +17,17 @@ if (
 }
 
 const touchdown = () => {
-  if(initialClick){
+  if(document.getElementById('clickContainer')){
+    document.getElementById('clickContainer').remove();
     // play video
     mainVideo.play();
-    document.getElementById('soundboardDisclaimerMsg').style.opacity = 1;
-    document.getElementById('disclaimer').remove();
-    console.log("play video");
-    initialClick = false;
-  } else {
-    // display disclaimer and soundboard
-    initSoundboard();
   }
+  if(document.getElementById('disclaimer')){
+    document.getElementById('disclaimer').remove();
+  }
+  document.getElementById('soundboardDisclaimerMsg').style.opacity = 1;
+  console.log("play video");
+  initialClick = false;
 }
 
 const intAudio = (id) => {
@@ -36,20 +36,19 @@ const intAudio = (id) => {
 }
 
 const initSoundboard = () => {
-  if(document.getElementById('soundboardDisclaimerMsg')){
-    document.getElementById('soundboardDisclaimerMsg').remove();
-  }
-  console.log(1);
+  document.getElementById('soundboardDisclaimerMsg').style.opacity = 0;
   document.getElementById("soundboard").style.opacity = 1;
+  console.log(1);
 }
 
 const removeSoundboard = () => {
   console.log(2);
   document.getElementById("soundboard").style.opacity = 0;
+  document.getElementById('soundboardDisclaimerMsg').style.opacity = 1;
 }
 
 const removeDisclaimer = () => {
-  document.getElementById('soundboardDisclaimerMsg').remove();
+  document.getElementById('soundboardDisclaimerMsg').style.opacity = 0;
 }
 
 const touchup = () => {
